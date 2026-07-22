@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<!-- Mirrored from Evergreen-helper.ru/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jul 2026 16:44:16 GMT -->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Evergreen Helper — оверлей-помощник для админов Evergreen RP</title>
+<meta name="description" content="Evergreen Helper — оверлей-биндер для администраторов Evergreen RP: меню ответов, умный поиск, ПКМ-меню в игре, текстовые сокращения, админ-команды. Безопасно, офлайн, без сбора данных." />
+<link rel="icon" href="img/newlogo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com/" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== Animated background ===== -->
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+
+<!-- ===== Nav ===== -->
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a href="#top" class="brand">
+      <span class="brand__mark"><img src="img/newlogo.png" alt="Evergreen Helper" /></span>
+      <span class="brand__text">Evergreen<span class="brand__accent">Helper</span></span>
+    </a>
+    <nav class="nav__links">
+      <a href="#features">Возможности</a>
+      <a href="#rmb">ПКМ-меню</a>
+      <a href="#security">Безопасность</a>
+      <a href="faq/index.html">Инструкция</a>
+    </nav>
+    <a href="download/index.html" class="btn btn--accent btn--sm nav__cta">Скачать</a>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="top">
+  <div class="wrap hero__inner">
+    <div class="hero__copy reveal">
+      <span class="eyebrow">Оверлей-помощник · Evergreen RP</span>
+      <h1 class="hero__title">
+        Отвечай игрокам <span class="grad">в три раза быстрее</span>
+      </h1>
+      <p class="hero__sub">
+        Evergreen Helper — это лёгкий оверлей-биндер для администраторов Evergreen RP.
+        Меню готовых ответов, умный поиск, моментальная вставка в чат и фишка, которой нет
+        в обычном AHK — <b>контекстное меню избранного по правой кнопке прямо в игре</b>.
+      </p>
+      <div class="hero__cta">
+        <a href="download/index.html" class="btn btn--accent">Скачать бесплатно</a>
+        <a href="#features" class="btn btn--ghost">Смотреть возможности</a>
+      </div>
+      <ul class="hero__pills">
+        <li><span class="dot dot--green"></span> 100% оффлайн</li>
+        <li><span class="dot dot--green"></span> Без сбора данных</li>
+        <li><span class="dot dot--green"></span> Проверено VirusTotal</li>
+      </ul>
+    </div>
+
+    <!-- Interactive mini-launcher -->
+    <div class="hero__demo reveal" data-tilt>
+      <div class="card mockup" id="mock">
+        <div class="mockup__header">
+          <div class="seg">
+            <button class="seg__btn is-active">Основное</button>
+            <button class="seg__btn">Админ</button>
+            <button class="seg__btn">Редактор</button>
+          </div>
+          <span class="mockup__hint">демо · печатайте в поиске</span>
+        </div>
+        <div class="mockup__search">
+          <svg viewBox="0 0 24 24" class="ic"><path d="M11 4a7 7 0 1 0 .01 0Z M20 20 L16.2 16.2"/></svg>
+          <input id="demoSearch" type="text" placeholder="Поиск: попробуйте «4.1» или «привет»" autocomplete="off" spellcheck="false" />
+        </div>
+        <div class="mockup__body">
+          <ul class="mockup__list" id="demoList"></ul>
+          <div class="mockup__preview" id="demoPreview"></div>
+        </div>
+        <div class="mockup__footer">
+          <span class="by">by irhz</span>
+          <span class="kbd-row"><span class="kbd">Tab</span> открыть · <span class="kbd">Space</span> выбрать</span>
+        </div>
+      </div>
+      <div class="mockup__glow" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Stats band ===== -->
+<section class="stats wrap reveal">
+  <div class="stat"><span class="stat__num" data-count="6">6</span><span class="stat__label">типов элементов базы</span></div>
+  <div class="stat"><span class="stat__num">×15</span><span class="stat__label">регулировка скорости</span></div>
+  <div class="stat"><span class="stat__num">0</span><span class="stat__label">телеметрии и трекинга</span></div>
+  <div class="stat"><span class="stat__num">1</span><span class="stat__label">портативный .exe</span></div>
+</section>
+
+<!-- ===== Features ===== -->
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="eyebrow">Возможности</span>
+      <h2>Всё, что нужно админу — в одном оверлее</h2>
+      <p class="section__lead">Открывается поверх игры по горячей клавише, не сворачивая её. Ниже — каждая ключевая функция с реальными скриншотами интерфейса.</p>
+    </div>
+
+    <!-- Feature 1: Main TAB -->
+    <article class="feature reveal">
+      <div class="feature__text">
+        <span class="feature__tag">Основной TAB</span>
+        <h3>База ответов всегда под рукой</h3>
+        <p>Древовидное меню категорий с живым предпросмотром справа. Один взгляд — и нужный ответ скопирован в буфер.</p>
+        <ul class="ticks">
+          <li>Категории, ответы, подсказки, команды и банворды в одном дереве</li>
+          <li>Предпросмотр с полным текстом, бейджами и красной меткой наказания</li>
+          <li>Избранное — закрепляйте часто используемое наверх</li>
+          <li>Полная навигация с клавиатуры: <span class="kbd">W</span>/<span class="kbd">S</span>, стрелки, <span class="kbd">Space</span>, <span class="kbd">Esc</span></li>
+          <li>Окно перетаскивается, позиция запоминается между запусками</li>
+        </ul>
+      </div>
+      <figure class="feature__shot"><img loading="lazy" src="img/2.png" alt="Основной TAB с меню ответов" /></figure>
+    </article>
+
+    <!-- Feature 2: Search -->
+    <article class="feature feature--rev reveal">
+      <div class="feature__text">
+        <span class="feature__tag">Поиск и индексация</span>
+        <h3>Находит мгновенно — даже по обрывкам</h3>
+        <p>Многословный поиск разбивает запрос на части и ищет каждое слово в названии, тексте <i>и</i> тегах. Запрос «4.1 ОПП» найдёт нужный пункт правил, даже если «4.1» в тексте, а «ОПП» — в тегах.</p>
+        <ul class="ticks">
+          <li>Теги-синонимы и короткие названия для каждого элемента</li>
+          <li>Подсветка всех совпадений прямо в тексте</li>
+          <li>Авто-прокрутка предпросмотра к найденному фрагменту</li>
+          <li>Банворды с правилом и наказанием — отдельный тип, заметный красный бейдж</li>
+        </ul>
+      </div>
+      <figure class="feature__shot"><img loading="lazy" src="img/5.png" alt="Демонстрация поиска и индексации ответов" /></figure>
+    </article>
+
+    <!-- Feature 3: RMB (highlight) -->
+    <article class="feature feature--hl reveal">
+      <div class="feature__text">
+        <span class="feature__tag feature__tag--accent">Главная фишка</span>
+        <h3>Контекстное меню избранного по правой кнопке</h3>
+        <p>Кликните правой кнопкой <b>прямо в игре</b> — у курсора появится аккуратное меню избранных ответов. Выбрали — текст вставлен в чат. Никаких alt-tab, никакого поиска по памяти.</p>
+        <ul class="ticks">
+          <li>Открывается только в игре — определяется автоматически, родное меню не мешает</li>
+          <li>Живой поиск прямо в меню: начните печатать — список фильтруется</li>
+          <li>Закрепление и сортировка по частоте использования</li>
+          <li>Опция «Отправлять сразу» — Enter жмётся автоматически</li>
+          <li>Вставка через буфер обмена (Ctrl+V) — быстро и надёжно даже в CEF-чате</li>
+        </ul>
+        <a href="#rmb" class="inline-link">Попробовать вживую ниже ↓</a>
+      </div>
+      <figure class="feature__shot"><img loading="lazy" src="img/4.png" alt="Удобное ПКМ-меню избранного" /></figure>
+    </article>
+
+    <!-- Feature 4: Admin -->
+    <article class="feature feature--rev reveal">
+      <div class="feature__text">
+        <span class="feature__tag">TAB Админ</span>
+        <h3>Пакет команд — в один клик</h3>
+        <p>До 10 команд (например, <span class="kbd">/gm</span>) в пресете. Кнопка «Исполнить все» сама открывает чат, по очереди вводит и отправляет каждую, пропуская пустые.</p>
+        <ul class="ticks">
+          <li>Назначаемая горячая клавиша — запуск пресета без открытия меню</li>
+          <li>Надёжные фиксированные тайминги — команды не «слипаются»</li>
+          <li>Пресет сохраняется и экспортируется вместе с базой</li>
+        </ul>
+      </div>
+      <figure class="feature__shot"><img loading="lazy" src="img/1.jpg" alt="TAB Админ с командами" /></figure>
+    </article>
+
+    <!-- Feature 5: Editor -->
+    <article class="feature reveal">
+      <div class="feature__text">
+        <span class="feature__tag">Редактор</span>
+        <h3>Полный контроль над базой — без кода</h3>
+        <p>Встроенный редактор вместо ручного .ahk-скрипта. Создавайте, перемещайте и вкладывайте элементы мышью, настраивайте каждую деталь.</p>
+        <ul class="ticks">
+          <li>Иконки-эмодзи, теги, наказания, переменные <span class="kbd">{имя}</span> в ответах</li>
+          <li>Текстовые сокращения (макросы) для ответов и команд</li>
+          <li>«Скрыть из основного меню» — доступно в игре и поиске, но не мозолит глаза</li>
+          <li>Импорт / экспорт пресетов и резервные копии в один клик</li>
+        </ul>
+      </div>
+      <figure class="feature__shot"><img loading="lazy" src="img/3.png" alt="Редактор базы ответов" /></figure>
+    </article>
+
+    <!-- Feature 6: Settings + expander -->
+    <article class="feature feature--rev reveal">
+      <div class="feature__text">
+        <span class="feature__tag">Настройки и сокращения</span>
+        <h3>Гибко под себя</h3>
+        <p>Текстовый экспандер: наберите <span class="kbd">.ку</span> в любом окне Windows — и сокращение мгновенно превратится в полный текст. Работает в игровом чате, Discord, блокноте.</p>
+        <ul class="ticks">
+          <li>Перебинд клавиши открытия меню и клавиши админ-режима</li>
+          <li>Регулировка скорости ввода: от ×0.5 (надёжно) до ×15 (молниеносно)</li>
+          <li>Тумблеры: ПКМ-меню, сортировка по частоте, авто-отправка, верхний оверлей</li>
+          <li>Любая настройка применяется и сохраняется сразу</li>
+        </ul>
+      </div>
+      <figure class="feature__shot"><img loading="lazy" src="img/6.png" alt="Настройки приложения" /></figure>
+    </article>
+  </div>
+</section>
+
+<!-- ===== Interactive RMB demo ===== -->
+<section class="section section--alt" id="rmb">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="eyebrow">Интерактив</span>
+      <h2>Почувствуйте ПКМ-меню сами</h2>
+      <p class="section__lead">Кликните <b>правой кнопкой мыши</b> в зоне ниже — точно так же это работает в игре. Выберите ответ — и он «вставится».</p>
+    </div>
+    <div class="rmb-zone reveal" id="rmbZone">
+      <div class="rmb-zone__hint">
+        <svg viewBox="0 0 24 24" class="ic ic--lg"><path d="M12 2 a7 7 0 0 0-7 7 v6 a7 7 0 0 0 14 0 V9 a7 7 0 0 0-7-7Z M12 2 v7 M5 9 h7"/></svg>
+        <p>Правый клик где угодно в этой области</p>
+        <span>родное меню браузера здесь подавлено — как игровое в Evergreen Helper</span>
+      </div>
+    </div>
+    <div class="toast" id="toast"></div>
+  </div>
+</section>
+
+<!-- ===== Security ===== -->
+<section class="section" id="security">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="eyebrow">Безопасность и приватность</span>
+      <h2>Почему админам не о чем беспокоиться</h2>
+      <p class="section__lead">Помощник для администраторов обязан быть прозрачным. Здесь нечего скрывать — и это легко проверить.</p>
+    </div>
+
+    <div class="sec-grid">
+      <div class="sec-card reveal">
+        <div class="sec-card__ic">🔒</div>
+        <h3>Ноль сбора данных</h3>
+        <p>Нет телеметрии, аналитики, аккаунтов и регистрации. Программа не отправляет о вас вообще ничего и никуда.</p>
+      </div>
+      <div class="sec-card reveal">
+        <div class="sec-card__ic">🌐</div>
+        <h3>Полностью офлайн</h3>
+        <p>Интернет не требуется ни для запуска, ни для работы. Нет сетевых соединений — нечему «утекать».</p>
+      </div>
+      <div class="sec-card reveal">
+        <div class="sec-card__ic">📂</div>
+        <h3>Данные только у вас</h3>
+        <p>База хранится локально в открытом JSON (<span class="code">%AppData%\EvergreenHelper</span>). Откройте и убедитесь сами — никаких скрытых полей.</p>
+      </div>
+      <div class="sec-card reveal">
+        <div class="sec-card__ic">🧩</div>
+        <h3>Не лезет в игру</h3>
+        <p>Не читает память игры, не инжектится в её процесс и не меняет файлы клиента. Только стандартные Windows API: горячие клавиши, буфер обмена, синтетический ввод.</p>
+      </div>
+      <div class="sec-card reveal">
+        <div class="sec-card__ic">🛡️</div>
+        <h3>Проверяется любым антивирусом</h3>
+        <p>Обычное .NET-приложение без обфускации и упаковщиков. Сканируйте чем угодно — Defender, Kaspersky, ESET.</p>
+      </div>
+      <div class="sec-card reveal">
+        <div class="sec-card__ic">⚙️</div>
+        <h3>Предсказуемое поведение</h3>
+        <p>Делает ровно то, что вы настроили: вставляет текст и шлёт команды по вашей команде. Никаких фоновых сюрпризов.</p>
+      </div>
+    </div>
+
+    <a class="vt reveal" href="https://www.virustotal.com/gui/file/6ad9322ad6ffc2415cfb0052f76b34efeab2f4a1d51f4c47fbfd35884fb3eeb3/detection" target="_blank" rel="noopener">
+      <div class="vt__info">
+        <div class="vt__badge">
+          <span class="vt__check">✓</span>
+          <div>
+            <strong>Проверено на VirusTotal</strong>
+            <span>70+ антивирусных движков · результат открыт для всех</span>
+          </div>
+        </div>
+        <p class="vt__desc">Независимая проверка файла десятками антивирусов. Отчёт публичный — откройте и убедитесь сами в любой момент.</p>
+        <span class="vt__link">Открыть отчёт →</span>
+      </div>
+      <figure class="vt__shot"><img loading="lazy" src="img/virus%20total.png" alt="Результат проверки на VirusTotal" /></figure>
+    </a>
+  </div>
+</section>
+
+<!-- ===== vs AHK ===== -->
+<section class="section section--alt" id="vs-ahk">
+  <div class="wrap">
+    <div class="section__head reveal">
+      <span class="eyebrow">Сравнение</span>
+      <h2>Почему это лучше обычного AutoHotkey</h2>
+      <p class="section__lead">AHK мощный, но это «голый» движок: скрипты, синтаксис, ручная отладка. Evergreen Helper — готовый инструмент именно под работу админа.</p>
+    </div>
+
+    <div class="compare reveal">
+      <div class="compare__row compare__row--head">
+        <div class="compare__cell compare__feature">Что важно админу</div>
+        <div class="compare__cell compare__ahk">Обычный AHK</div>
+        <div class="compare__cell compare__us">Evergreen Helper</div>
+      </div>
+      <div class="compare__row">
+        <div class="compare__cell compare__feature">Настройка</div>
+        <div class="compare__cell compare__ahk"><span class="x">✕</span> писать и компилировать скрипты</div>
+        <div class="compare__cell compare__us"><span class="v">✓</span> визуальный редактор, без кода</div>
+      </div>
+      <div class="compare__row">
+        <div class="compare__cell compare__feature">ПКМ-меню в игре</div>
+        <div class="compare__cell compare__ahk"><span class="x">✕</span> из коробки нет</div>
+        <div class="compare__cell compare__us"><span class="v">✓</span> меню избранного у курсора</div>
+      </div>
+      <div class="compare__row">
+        <div class="compare__cell compare__feature">Поиск ответов</div>
+        <div class="compare__cell compare__ahk"><span class="x">✕</span> нет — помнить хоткеи</div>
+        <div class="compare__cell compare__us"><span class="v">✓</span> умный поиск по тегам и тексту</div>
+      </div>
+      <div class="compare__row">
+        <div class="compare__cell compare__feature">Структура базы</div>
+        <div class="compare__cell compare__ahk"><span class="x">✕</span> плоский .ahk-файл</div>
+        <div class="compare__cell compare__us"><span class="v">✓</span> категории, превью, типы, переменные</div>
+      </div>
+      <div class="compare__row">
+        <div class="compare__cell compare__feature">Вставка в игровой чат</div>
+        <div class="compare__cell compare__ahk"><span class="x">✕</span> хрупкие Send, теряет символы</div>
+        <div class="compare__cell compare__us"><span class="v">✓</span> буфер + выверенные тайминги</div>
+      </div>
+      <div class="compare__row">
+        <div class="compare__cell compare__feature">Обмен с коллегами</div>
+        <div class="compare__cell compare__ahk"><span class="x">✕</span> пересылать куски кода</div>
+        <div class="compare__cell compare__us"><span class="v">✓</span> импорт/экспорт пресетов одним файлом</div>
+      </div>
+      <div class="compare__row">
+        <div class="compare__cell compare__feature">Запуск</div>
+        <div class="compare__cell compare__ahk"><span class="x">✕</span> нужен установленный AHK/рантайм</div>
+        <div class="compare__cell compare__us"><span class="v">✓</span> один портативный .exe</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section cta" id="cta">
+  <div class="wrap cta__inner reveal">
+    <h2>Готовы ускорить свою админку?</h2>
+    <p>Лёгкий, безопасный и приятный инструмент, заточенный под повседневную работу администратора RP-сервера.</p>
+    <div class="cta__btns">
+      <a href="download/index.html" class="btn btn--accent btn--lg">Скачать Evergreen Helper</a>
+      <a href="https://www.virustotal.com/gui/file/6ad9322ad6ffc2415cfb0052f76b34efeab2f4a1d51f4c47fbfd35884fb3eeb3/detection" target="_blank" rel="noopener" class="btn btn--ghost btn--lg">Отчёт VirusTotal</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <div class="brand">
+      <span class="brand__mark"><img src="img/newlogo.png" alt="Evergreen Helper" /></span>
+      <span class="brand__text">Evergreen<span class="brand__accent">Helper</span></span>
+    </div>
+    <p class="footer__by">Оверлей-помощник для администраторов Evergreen RP · <b>by irhz</b></p>
+    <p class="footer__small">Программа не связана с Rockstar Games и конкретными игровыми проектами. Все данные хранятся локально на вашем ПК.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>
